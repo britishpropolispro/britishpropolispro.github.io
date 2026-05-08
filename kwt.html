@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRITISH PROPOLIS PRO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .snap-container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+        }
+        section {
+            scroll-snap-align: start;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 3rem 1rem;
+        }
+        .wa-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            transition: transform 0.3s ease;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+        }
+        .product-img {
+            max-height: 320px;
+            width: auto;
+            filter: drop-shadow(0 15px 30px rgba(0,0,0,0.15));
+            animation: float 3s ease-in-out infinite;
+            object-fit: contain;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+        /* Penyesuaian khusus HP agar tidak berantakan */
+        @media (max-width: 768px) {
+            .snap-container {
+                height: auto;
+                scroll-snap-type: none;
+            }
+            section {
+                min-height: auto;
+                height: auto;
+                padding: 4rem 1.5rem;
+                display: block;
+            }
+            .product-img {
+                max-height: 250px;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Tombol WhatsApp Melayang -->
+    <a href="https://wa.me/6285183002717?text=Halo%20Admin,%20saya%20ingin%20bertanya%20mengenai%20produk%20BP%20Group" 
+       target="_blank" class="wa-float bg-green-500 text-white p-4 rounded-full shadow-2xl flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+        <span class="font-bold hidden md:inline">Pesan Sekarang</span>
+    </a>
+
+    <div class="snap-container">
+
+        <!-- LAYAR 1: HERO & KEPERCAYAAN -->
+        <section class="bg-gradient-to-br from-red-700 to-red-900 text-white">
+            <div class="max-w-6xl mx-auto text-center">
+                <h1 class="text-4xl md:text-7xl font-extrabold mb-4 animate__animated animate__fadeInDown">BRITISH PROPOLIS</h1>
+                <p class="text-lg md:text-2xl mb-8 opacity-90 animate__animated animate__fadeInUp">Produk Kesehatan Premium Standar Dunia</p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center mb-2 shadow-lg p-3">
+                            <img src="images/bpom.png" alt="BPOM" onerror="this.src='https://img.icons8.com/color/96/quality-control.png'">
+                        </div>
+                        <span class="text-[10px] md:text-xs font-semibold">Izin Resmi BPOM</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center mb-2 shadow-lg p-3">
+                            <img src="images/halal.png" alt="HALAL" onerror="this.src='https://img.icons8.com/color/96/halal.png'">
+                        </div>
+                        <span class="text-[10px] md:text-xs font-semibold">MUI & HMC UK</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center mb-2 shadow-lg p-3">
+                            <img src="images/fda.png" alt="FDA" onerror="this.src='https://img.icons8.com/color/96/inspection.png'">
+                        </div>
+                        <span class="text-[10px] md:text-xs font-semibold">Standar USA (FDA)</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center mb-2 shadow-lg p-3">
+                            <img src="images/original.png" alt="100% Original" onerror="this.src='https://img.icons8.com/color/96/verified-badge.png'">
+                        </div>
+                        <span class="text-[10px] md:text-xs font-semibold">100% Original</span>
+                    </div>
+                </div>
+                <!-- SOCIAL MEDIA, TEXT & PHOTO SECTION -->
+                <div class="p-6 glass-card text-slate-800 inline-block w-full max-w-2xl border-t-4 border-yellow-500">
+                    <p class="italic text-xs md:text-base leading-relaxed mb-4">Dibersamai oleh <strong>Tokoh Dunia, Ulama Besar, </strong>dan<strong> Artis Ternama</strong>.</p>
+                    
+                    <!-- FOTO TOKOH (Gunakan images/tokoh.png) -->
+                    <div class="mb-6 overflow-hidden rounded-xl shadow-inner bg-slate-100">
+                        <img src="TOKO.png" alt="Tokoh BP Group" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/800x400?text=Foto+Tokoh+Bersama+BP+Group'">
+                    </div>
+
+                    <div class="flex flex-wrap justify-center gap-6 md:gap-10 border-t border-slate-100 pt-6">
+                        <a href="https://www.instagram.com/britishpropolis.pro" class="flex flex-col items-center gap-1 group">
+                            <div class="p-2 rounded-full bg-pink-100 text-pink-600 group-hover:bg-pink-600 group-hover:text-white transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                            </div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider">Instagram</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@britishpropolis.pro" class="flex flex-col items-center gap-1 group">
+                            <div class="p-2 rounded-full bg-slate-100 text-slate-900 group-hover:bg-black group-hover:text-white transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                            </div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider">TikTok</span>
+                        </a>
+                        <a href="https://www.facebook.com/pritishpropolis.pro" class="flex flex-col items-center gap-1 group">
+                            <div class="p-2 rounded-full bg-blue-100 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                            </div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider">Facebook</span>
+                        </a>
+                        <a href="https://wa.me/6285183002717" class="flex flex-col items-center gap-1 group">
+                            <div class="p-2 rounded-full bg-green-100 text-green-600 group-hover:bg-green-600 group-hover:text-white transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider italic">0851-8300-2717</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LAYAR 2: BRITISH PROPOLIS (DEWASA) -->
+        <section class="bg-white">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-center">
+                <!-- Foto Di Atas (Mobile) -->
+                <div class="w-full flex justify-center order-first md:order-last">
+                    <img src="BP-M.png" alt="British Propolis" class="product-img rounded-3xl" onerror="this.src='https://via.placeholder.com/400x500?text=British+Propolis+Red'">
+                </div>
+                <!-- Keterangan -->
+                <div class="w-full text-center md:text-left">
+                    <span class="bg-red-100 text-red-700 px-4 py-1 rounded-full text-[10px] font-bold uppercase">Produk Dewasa</span>
+                    <h2 class="text-3xl md:text-5xl font-bold my-4 text-red-700 leading-tight">British Propolis</h2>
+                    <p class="text-base md:text-lg text-slate-600 mb-6">Propolis asli Inggris dengan teknologi mutakhir untuk perlindungan sel tubuh maksimal.</p>
+                    <ul class="space-y-2 mb-8 inline-block text-left font-medium text-sm md:text-base">
+                        <li class="flex items-start gap-3"><span class="text-red-600">✓</span> Menjaga imunitas & stamina harian</li>
+                        <li class="flex items-start gap-3"><span class="text-red-600">✓</span> Atasi Kolesterol, Asam Urat, & Diabetes</li>
+                        <li class="flex items-start gap-3"><span class="text-red-600">✓</span> Hasil nyata terasa dalam 3 hari</li>
+                    </ul>
+                    <!-- Order -->
+                    <div class="text-2xl md:text-3xl font-bold text-red-600 mb-6">Rp 250.000</div>
+                    <a href="https://wa.me/6285183002717?text=Saya%20ingin%20pesan%20British%20Propolis%20Dewasa" class="w-full md:w-auto bg-red-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-red-700 shadow-lg block md:inline-block text-center">Pesan Sekarang</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- LAYAR 3: BP GREEN (ANAK) -->
+        <section class="bg-green-50">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-center">
+                <!-- Foto -->
+                <div class="w-full flex justify-center order-first">
+                    <img src="BP-H.png" alt="BP Green" class="product-img rounded-3xl" onerror="this.src='https://via.placeholder.com/400x500?text=BP+Propolis+Green'">
+                </div>
+                <!-- Keterangan -->
+                <div class="w-full text-center md:text-left">
+                    <span class="bg-green-100 text-green-700 px-4 py-1 rounded-full text-[10px] font-bold uppercase">Anak (1-12 Tahun)</span>
+                    <h2 class="text-3xl md:text-5xl font-bold my-4 text-green-700 leading-tight">British Propolis Green</h2>
+                    <p class="text-base md:text-lg text-slate-600 mb-6">Nutrisi pertama untuk kesehatan si kecil agar tetap aktif dan cerdas.</p>
+                    <ul class="space-y-2 mb-8 inline-block text-left text-sm md:text-base">
+                        <li class="flex items-center gap-3 font-medium"><span class="w-2 h-2 bg-green-500 rounded-full"></span> Meredakan Demam, Flu, & Batuk</li>
+                        <li class="flex items-center gap-3 font-medium"><span class="w-2 h-2 bg-green-500 rounded-full"></span> Meningkatkan nafsu makan anak</li>
+                        <li class="flex items-center gap-3 font-medium"><span class="w-2 h-2 bg-green-500 rounded-full"></span> Meningkatkan daya konsentrasi</li>
+                    </ul>
+                    <!-- Order -->
+                    <div class="text-2xl md:text-3xl font-bold text-green-600 mb-6">Rp 250.000</div>
+                    <a href="https://wa.me/6285183002717?text=Saya%20ingin%20pesan%20British%20Propolis%20Green%20Anak" class="w-full md:w-auto bg-green-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-green-700 shadow-lg block md:inline-block text-center">Order via WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- LAYAR 4: BP NORWAY -->
+        <section class="bg-blue-700 text-white">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-center">
+                <!-- Foto -->
+                <div class="w-full flex justify-center order-first md:order-last">
+                    <img src="BP-N.png" alt="BP Norway" class="product-img rounded-3xl" onerror="this.src='https://via.placeholder.com/400x500?text=BP+Norway+Salmon+Oil'">
+                </div>
+                <!-- Keterangan -->
+                <div class="w-full text-center md:text-left">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">BP Norway</h2>
+                    <p class="text-base md:text-lg opacity-90 mb-6">Atlantic Salmon Oil untuk kecerdasan Otak, Jantung, dan Mata.</p>
+                    <ul class="space-y-2 mb-8 inline-block text-left text-sm md:text-base">
+                        <li class="flex items-center gap-3 font-medium"><span class="w-2 h-2 bg-green-500 rounded-full"></span> Meredakan Demam, Flu, & Batuk</li>
+                        <li class="flex items-center gap-3 font-medium"><span class="w-2 h-2 bg-green-500 rounded-full"></span> Meningkatkan nafsu makan anak</li>
+                        <li class="flex items-center gap-3 font-medium"><span class="w-2 h-2 bg-green-500 rounded-full"></span> Meningkatkan daya konsentrasi</li>
+                    </ul>
+                    <!-- Order -->
+                    <div class="text-2xl md:text-3xl font-bold mb-6">Rp 250.000</div>
+                    <a href="https://wa.me/6285183002717?text=Saya%20ingin%20pesan%20BP%20Norway%20Salmon%20Oil" class="w-full md:w-auto bg-white text-blue-700 px-10 py-4 rounded-xl font-bold hover:bg-blue-50 shadow-xl block md:inline-block text-center">Pesan Sekarang</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- LAYAR 5: SERI BRASSIC -->
+        <section class="bg-orange-50">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="text-3xl md:text-5xl font-bold mb-8 text-orange-900">Seri Brassic</h2>
+                <div class="grid md:grid-cols-2 gap-6 items-stretch mb-10">
+                    <!-- Brassic Pro -->
+                    <div class="glass-card p-6 flex flex-col items-center">
+                        <img src="BP-P.png" alt="Brassic Pro" class="h-40 mb-4 object-contain" onerror="this.src='https://via.placeholder.com/200x250?text=Brassic+Pro'">
+                        <h3 class="text-xl font-bold mb-2 text-orange-800">Brassic Pro</h3>
+                        <p class="text-xs text-slate-600 mb-4">Solusi <strong>Nyeri Sendi</strong> & <strong>Insomnia</strong>.</p>
+                        <div class="mt-auto font-bold text-orange-700">Rp 250.000</div>
+                    </div>
+                    <!-- Brassic Eye -->
+                    <div class="glass-card p-6 flex flex-col items-center">
+                        <img src="BP-E.png" alt="Brassic Eye" class="h-40 mb-4 object-contain" onerror="this.src='https://via.placeholder.com/200x250?text=Brassic+Eye'">
+                        <h3 class="text-xl font-bold mb-2 text-red-800">Brassic Eye</h3>
+                        <p class="text-xs text-slate-600 mb-4">Nutrisi <strong>Mata Minus</strong> & <strong>Radiasi</strong>.</p>
+                        <div class="mt-auto font-bold text-red-700">Rp 250.000</div>
+                    </div>
+                </div>
+                <a href="https://wa.me/6285183002717?text=Saya%20tertarik%20dengan%20produk%20Seri%20Brassic" class="w-full md:w-auto bg-orange-600 text-white px-12 py-4 rounded-2xl font-bold shadow-xl block md:inline-block text-center">Hubungi Admin Brassic</a>
+            </div>
+        </section>
+
+        <!-- LAYAR 6: STEFFI -->
+        <section class="bg-white">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-center">
+                <div class="w-full flex justify-center order-first md:order-last">
+                    <img src="BP-S.png" alt="Steffi" class="product-img rounded-3xl" onerror="this.src='https://via.placeholder.com/400x500?text=Steffi+Sweetener'">
+                </div>
+                <div class="w-full text-center md:text-left">
+                    <h2 class="text-3xl md:text-5xl font-bold my-4 text-blue-600">Steffi Sweetener</h2>
+                    <p class="text-base md:text-lg text-slate-600 mb-6">Pemanis alami daun Stevia. 0% Kalori, 100% Manis Sehat.</p>
+                    <div class="text-2xl md:text-3xl font-bold text-blue-600 mb-6">Rp 250.000</div>
+                    <a href="https://wa.me/6285183002717?text=Saya%20ingin%20pesan%20Steffi%20Natural%20Sweetener" class="w-full md:w-auto bg-blue-600 text-white px-10 py-4 rounded-xl font-bold shadow-lg block md:inline-block text-center">Pesan Pemanis Sehat</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- LAYAR 7: BELGIE PRO -->
+        <section class="bg-slate-900 text-white">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-10">BELGIE PRO</h2>
+                <p class="text-yellow-500 font-medium text-lg">Skincare Halal dengan Kandungan Propolis & Kolagen Standar Eropa</p>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto mt-6"></div>
+            </div>
+
+            <!-- Grid 5 Produk -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                
+                <!-- 1. Facial Wash -->
+                <div class="glass-card p-6 flex flex-col items-center text-center">
+                    <div class="h-48 mb-6 flex items-center justify-center">
+                        <img src="BP-F.png" alt="Facial Wash" class="max-h-full object-contain" onerror="this.src='https://via.placeholder.com/150x200?text=Facial+Wash'">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Facial Wash</h3>
+                    <p class="text-slate-400 text-xs mb-4">Membersihkan pori & mencerahkan wajah seketika.</p>
+                    <div class="mt-auto">
+                        <div class="text-xl font-bold text-yellow-500 mb-4">Rp 185.000</div>
+                    </div>
+                </div>
+
+                <!-- 2. Serum -->
+                <div class="glass-card p-6 flex flex-col items-center text-center border-yellow-500/30">
+                    <div class="h-48 mb-6 flex items-center justify-center">
+                        <img src="BP-A.png" alt="Anti-Aging Serum" class="max-h-full object-contain" onerror="this.src='https://via.placeholder.com/150x200?text=Serum'">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Anti-Aging Serum</h3>
+                    <p class="text-slate-400 text-xs mb-4">Menyamarkan kerutan & tanda penuaan dini.</p>
+                    <div class="mt-auto">
+                        <div class="text-xl font-bold text-yellow-500 mb-4">Rp 185.000</div>
+                    </div>
+                </div>
+
+                <!-- 3. Night Cream -->
+                <div class="glass-card p-6 flex flex-col items-center text-center">
+                    <div class="h-48 mb-6 flex items-center justify-center">
+                        <img src="BP-D.png" alt="Night Cream" class="max-h-full object-contain" onerror="this.src='https://via.placeholder.com/150x200?text=Night+Cream'">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Night Cream</h3>
+                    <p class="text-slate-400 text-xs mb-4">Nutrisi & regenerasi kulit di malam hari.</p>
+                    <div class="mt-auto">
+                        <div class="text-xl font-bold text-yellow-500 mb-4">Rp 185.000</div>
+                    </div>
+                </div>
+
+                <!-- 4. Day Cream -->
+                <div class="glass-card p-6 flex flex-col items-center text-center">
+                    <div class="h-48 mb-6 flex items-center justify-center">
+                        <img src="BP-D.png" alt="Day Cream" class="max-h-full object-contain" onerror="this.src='https://via.placeholder.com/150x200?text=Day+Cream'">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Day Cream</h3>
+                    <p class="text-slate-400 text-xs mb-4">Melindungi wajah dari UV & polusi seharian.</p>
+                    <div class="mt-auto">
+                        <div class="text-xl font-bold text-yellow-500 mb-4">Rp 185.000</div>
+                    </div>
+                </div>
+
+                <!-- 5. Toner -->
+                <div class="glass-card p-6 flex flex-col items-center text-center">
+                    <div class="h-48 mb-6 flex items-center justify-center">
+                        <img src="BP-B.png" alt="Toner" class="max-h-full object-contain" onerror="this.src='https://via.placeholder.com/150x200?text=Toner'">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">H.A. Toner</h3>
+                    <p class="text-slate-400 text-xs mb-4">Menyeimbangkan pH & menyegarkan kulit.</p>
+                    <div class="mt-auto">
+                        <div class="text-xl font-bold text-yellow-500 mb-4">Rp 185.000</div>
+                    </div>
+                </div>
+
+            </div>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10 flex flex-col justify-center">
+                        <a href="https://wa.me/6285183002717?text=Saya%20ingin%20pesan%20produk%20Belgie%20Pro" class="bg-white text-slate-900 py-4 rounded-full font-bold text-center block w-full">Order via WA</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LAYAR 8: PENUTUP -->
+        <section class="bg-slate-50 py-20 text-center">
+            <div class="max-w-4xl mx-auto px-6">
+                <svg class="mx-auto text-red-600 mb-6 animate__animated animate__pulse animate__infinite" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">Sedia Payung Sebelum Sakit</h2>
+                <p class="text-lg text-slate-600 mb-12 max-w-xl mx-auto">Berikan perlindungan terbaik untuk keluarga Anda hari ini juga.</p>
+                <a href="https://wa.me/6285183002717?text=Halo%20Admin,%20saya%20ingin%20konsultasi%20sebelum%20membeli" class="bg-red-600 text-white px-12 py-5 rounded-2xl font-bold text-xl shadow-2xl block md:inline-block text-center">Hubungi Admin Sekarang</a>
+                <div class="mt-20 pt-10 border-t border-slate-200">
+                    <p class="text-[10px] md:text-sm text-slate-500 font-medium">© 2024 BP Group Indonesia - britishpropolis. All Rights Reserved.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
